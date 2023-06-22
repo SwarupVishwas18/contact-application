@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&family=Poppins:wght@300&display=swap');
+
+:root{
+  --bg-col : #222831;
+  --card-color : #393E46;
+  --sec-color : #FFD369;
+  --text-col : #EEEEEE;
+}
+
+body{
+  background-color: var(--bg-col);
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-col);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.split {
+  display: flex;
+}
+
+
+.gutter {
+  background-color: #eee;
+
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+}
+
+.gutter.gutter-horizontal:hover {
+  cursor: col-resize;
+}
+
+#root{
+  height: 100vh;
+}
+
+.split{
+  height: 100%;
+}
+
+.logo{
+  font-family: 'Philosopher', sans-serif;
+  /* position: fixed; */
+  background-color: var(--bg-col);
+  /* width: inherit  ; */
+  height: 10vh;
+  text-align: center;
+
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+  overflow: scroll;
+  text-align: center;
+  /* padding: 2rem; */
+}
+
+.all-contacts{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contact-name{
+  padding: .5rem 2rem;
+  /* background-color: var(--card-color); */
+  border-radius: 12px;
+  transition: all ease-in-out 300ms;
+  cursor: pointer;
+}
+
+.contact-name:hover{
+  background-color: var(--card-color);
+  /* color: var(--bg-col); */
+}
+
+.tab{
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.main-section{
+  padding: 2rem;
+}
+
+button{
+  margin: 1px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  padding: .3rem 2rem;
+  background-color: var(--card-color);
+}
+
+h1, h2, h3{
+  font-family: 'Philosopher', sans-serif;
+
+}
+
+.card{
+  margin: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #393E46;
+  gap: 2rem;
+}
+
+.card-body{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.other-contact{
+  text-align: right;
+}
+
+.card .header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
