@@ -27,6 +27,9 @@ const Sidebar = () => {
     <div className="sidebar">
      <h2 className="logo">
         SaveContact
+        <div id="add">
+          +
+        </div>
      </h2>
      <div className="all-contacts">
         {bleachDivs}
