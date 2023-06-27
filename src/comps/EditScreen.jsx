@@ -49,6 +49,11 @@ const EditScreen = () => {
                 <label htmlFor="email">Email : </label>
                 <input type="email" id="email" />
             </div>
+            <div className="btn">
+                <button>
+                    Submit
+                </button>
+            </div>
         </div>
         )
 }
