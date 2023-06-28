@@ -1,4 +1,7 @@
-const EditScreen = () => {
+/* eslint-disable react/prop-types */
+// eslint-disable-next-line react/prop-types
+// eslint-disable-next-line react/prop-types
+const EditScreen = ({data, setData}) => {
     return (
         <div className="edit-screen">
             <h1>
@@ -6,19 +9,19 @@ const EditScreen = () => {
             </h1>
             <div className="name">
                 <label htmlFor="name">Name : </label>
-                <input type="text" id="name" />
+                <input value={data.name} type="text" id="name" />
             </div>
 
             <div className="name">
                 <label htmlFor="dob">Date of Birth : </label>
-                <input type="date" id="dob" />
+                <input value={data.dob} type="date" id="dob" />
             </div>
 
             <div className="name">
                 <div className="address">
                 <label htmlFor="address">Address : </label>
                 </div>
-                <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                <textarea value={data.address} name="address" id="address" cols="30" rows="10"></textarea>
             </div>
 
             <div className="name">
@@ -42,12 +45,12 @@ const EditScreen = () => {
 
             <div className="name">
                 <label htmlFor="phone">Phone : </label>
-                <input type="number" id="phone" />
+                <input value={data.phone} type="number" id="phone" />
             </div>
 
             <div className="name">
                 <label htmlFor="email">Email : </label>
-                <input type="email" id="email" />
+                <input value={data.email} type="email" id="email" />
             </div>
             <div className="btn">
                 <button>

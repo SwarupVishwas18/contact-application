@@ -4,7 +4,14 @@ import EditScreen from "./EditScreen";
 
 const MainSection = function () {
   const [isPreview, setIsPreview] = useState(true)
-
+  const [contactInfo, setContactInfo] = useState({
+    name: "Swarup",
+    dob:"23/12/2003",
+    address:"Eiffel City, Chakan",
+    gender:"Male",
+    phone:"8668442185",
+    email:"swarupvishwas000@gmail.com"
+  })
   return (
     <div className="main-section">
       <div className="tab">
@@ -19,15 +26,13 @@ const MainSection = function () {
         {
           isPreview ?
           <Card 
-          name={"Swarup Vishwas"}
-          dob={"23/12/2003"}
-          address={"Eiffel City, Chakan"}
-          gender={"Male i guess"}
-          phone={"8668442185"}
-          email={"swarupvishwas000@gmail.com"}
+          data={contactInfo}
         />
       :
-        <EditScreen />
+        <EditScreen 
+        data={contactInfo}
+        setData={setContactInfo}
+        />
       }
       </div>
     </div>

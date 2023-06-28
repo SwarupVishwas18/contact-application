@@ -1,13 +1,14 @@
+/* eslint-disable react/prop-types */
 // eslint-disable-next-line react/prop-types
-function Card({name, dob,address, gender, phone, email}){
+function Card({data}){
     return(
         <div className="card">
             <div className="header">
             <h1 className="name">
-                Name : {name}
+                Name : {data.name}
             </h1>
             <h3 className="name">
-                Date Of Birth : {dob}
+                Date Of Birth : {data.dob}
             </h3>
             </div>
             <hr />
@@ -16,18 +17,18 @@ function Card({name, dob,address, gender, phone, email}){
             <div className="address">
                 Address : 
                 <blockquote>
-                    {address}
+                    {data.address}
                 </blockquote>
             </div>
             <div className="other-contact">
                 <div className="gender">
-                    Gender : {gender}
+                    Gender : {data.gender}
                 </div>
                 <div className="phone">
-                    Phone : {phone}
+                    Phone : {data.phone}
                 </div>
                 <div className="email">
-                    Email : {email}
+                    Email : {data.email}
                 </div>
             </div>
             </div>

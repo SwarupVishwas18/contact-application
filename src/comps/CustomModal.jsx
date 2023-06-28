@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/prop-types
 const CustomModal = ({contactIp,setContactIp, setVisibility}) => {
     return (
       <div className="modal">
