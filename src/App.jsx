@@ -1,25 +1,23 @@
 import { useState } from 'react'
 import Sidebar from './comps/Sidebar'
-import CustomModal from './comps/CustomModal'
 import MainSection from './comps/MainSection'
 import Split from 'react-split'
 import './App.css'
 
 function App() {
 
-  const [showModal, setVisibility] = useState(true)
-  const [contactIp, setContactIp] = useState("")
+  const [contactInfo, setContactInfo] = useState([])
+  const [id, setId]  = useState(0)
   return (
    <div className="main">
 
-    {showModal && <CustomModal contactIp={contactIp} setContactIp={setContactIp} setVisibility={setVisibility} />}
     <Split
     sizes={[20, 80]}
     direction='horizontal'
     className="split"
     >
-         <Sidebar />
-         <MainSection />
+         <Sidebar contactInfo={contactInfo} setContactInfo={setContactInfo} id={id} setId={setId} />
+         <MainSection contactInfo={contactInfo} setContactInfo={setContactInfo} id={id} setId={setId} />
         </Split>
    </div>
   )

@@ -1,25 +1,20 @@
-const Sidebar = () => {
-  const bleachCharacters = [
-    "Elena Gilbert",
-    "Stefan Salvatore",
-    "Damon Salvatore",
-    "Caroline Forbes",
-    "Bonnie Bennett",
-    "Jeremy Gilbert",
-    "Matt Donovan",
-    "Alaric Saltzman",
-    "Klaus Mikaelson",
-    "Katherine Pierce",
-    "Enzo St. John",
-    "Tyler Lockwood",
-    "Elijah Mikaelson",
-    "Rebekah Mikaelson",
-    "Lexi Branson"
-  ];
-  const bleachDivs = bleachCharacters.map((char, index) => {
+/* eslint-disable react/prop-types */
+const Sidebar = ({contactInfo, setContactInfo, id, setId}) => {
+
+  function addContact(){
+    setContactInfo(prev => [...prev, {
+      name: "Swarup",
+    dob:"23/12/2003",
+    address:"Eiffel City, Chakan",
+    gender:"Male",
+    phone:"8668442185",
+    email:"swarupvishwas000@gmail.com"
+    }])
+  }
+  const bleachDivs = contactInfo.map((char, index) => {
     return (
-      <div key={index} className="contact-name">
-        {char}
+      <div key={index} onClick={()=>setId(index)} className="contact-name">
+        {char.name}
         </div>
     )
   })
@@ -27,7 +22,7 @@ const Sidebar = () => {
     <div className="sidebar">
      <h2 className="logo">
         SaveContact
-        <div id="add">
+        <div id="add" onClick={addContact}>
           +
         </div>
      </h2>

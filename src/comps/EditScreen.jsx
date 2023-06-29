@@ -2,6 +2,9 @@
 // eslint-disable-next-line react/prop-types
 // eslint-disable-next-line react/prop-types
 const EditScreen = ({data, setData}) => {
+    function setObject(name, value){
+        
+    }
     return (
         <div className="edit-screen">
             <h1>
@@ -9,7 +12,7 @@ const EditScreen = ({data, setData}) => {
             </h1>
             <div className="name">
                 <label htmlFor="name">Name : </label>
-                <input value={data.name} type="text" id="name" />
+                <input onChange={(e)=>setData(e.target.value)} value={data.name} type="text" id="name" />
             </div>
 
             <div className="name">
